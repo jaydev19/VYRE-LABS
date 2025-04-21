@@ -40,10 +40,7 @@ const Hero: React.FC = () => {
 
         {/* Lamp Demo */}
         <LampDemo />
-      
-      
-        
-      
+
         {/* Main Hero Content */}
         <motion.div
           ref={ref}
@@ -56,11 +53,10 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
-            <br />
-            <span className="block mb-4">Building the Future.</span>
-            <span className="block bg-gradient-to-br from-slate-200 to-slate-500 bg-clip-text text-transparent">
-              One Protocol at a Time
-            </span>
+            <div className="vyre-wrapper">
+              <div className="vyre-top">VYRE</div>
+              <div className="vyre-bottom">VYRE</div>
+            </div>
           </motion.h1>
 
           <motion.p
@@ -81,12 +77,13 @@ const Hero: React.FC = () => {
             </button>
           </motion.div>
         </motion.div>
-        </section>
-        
-        {/* Spacer */}
-        <div className="h-16 sm:h-32 bg-black"></div>
-        {/* Wavy Background */}
-        <div className="w-full absolute bottom-0 left-0">
+      </section>
+
+      {/* Spacer */}
+      <div className="h-16 sm:h-32 bg-black"></div>
+
+      {/* Wavy Background */}
+      <div className="w-full absolute bottom-0 left-0">
         <WavyBackground
           waveOpacity={0.3}
           blur={20}
@@ -94,9 +91,6 @@ const Hero: React.FC = () => {
           className="pointer-events-none"
         />
       </div>
-
-      
-      
     </div>
   );
 };

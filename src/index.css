@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 @layer base {
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply bg-black text-white/90 font-sans;
   }
@@ -16,27 +18,27 @@
   .prose {
     @apply text-white/80;
   }
-  
+
   .prose h1, .prose h2, .prose h3, .prose h4 {
     @apply text-white font-semibold mt-6 mb-4;
   }
-  
+
   .prose h4 {
     @apply text-lg;
   }
-  
+
   .prose p {
     @apply mb-4;
   }
-  
+
   .prose ul {
     @apply list-disc pl-6 mb-4;
   }
-  
+
   .prose li {
     @apply mb-2;
   }
-  
+
   .prose strong {
     @apply text-white;
   }
@@ -53,4 +55,36 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-white/10 rounded-full hover:bg-white/20;
+}
+
+/* ============================= */
+/* Split Text Effect for VYRE LABS */
+/* ============================= */
+.vyre-wrapper {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  line-height: 1;
+}
+
+.vyre-wrapper > div {
+  grid-area: 1/1/-1/-1;
+}
+
+.vyre-top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+.vyre-bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: transparent;
+  background: linear-gradient(177deg, black 53%, hsl(0, 0%, 100%) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
 }
